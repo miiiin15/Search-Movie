@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movie_search.data.mItem
 import com.example.movie_search.databinding.ActivityMainBinding
 import com.google.gson.GsonBuilder
 import okhttp3.*
@@ -96,15 +97,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    data class Homefeed (val items : List<Item>)
-    data class Item(
-        val title : String,
-        val link : String,
-        val image : String,
-        val subtitle : String,
-        val pubDate : String,
-        val director : String,
-        val actor : String,
-        val usrRating : String
-    )
+    data class Homefeed (val items : List<mItem>)
+
 }

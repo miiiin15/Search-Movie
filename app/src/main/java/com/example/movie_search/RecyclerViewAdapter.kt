@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.movie_search.data.mItem
 
 class RecyclerViewAdapter(val homefeed: MainActivity.Homefeed):RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
 
@@ -30,7 +31,7 @@ class RecyclerViewAdapter(val homefeed: MainActivity.Homefeed):RecyclerView.Adap
 
 
     class ViewHolder(val view: View): RecyclerView.ViewHolder(view) {
-        fun bindItems(data : MainActivity.Item){
+        fun bindItems(data : mItem){
             val textView_title : TextView = itemView.findViewById(R.id.textView_title)
             val textView_actor : TextView = itemView.findViewById(R.id.textView_actor)
             val textView_director : TextView = itemView.findViewById(R.id.textView_director)
